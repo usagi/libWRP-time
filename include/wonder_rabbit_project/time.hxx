@@ -1,6 +1,8 @@
 #pragma once
 
 #include <chrono>
+#include <functional>
+#include <thread>
 
 namespace wonder_rabbit_project
 {
