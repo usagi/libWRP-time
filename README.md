@@ -1,6 +1,6 @@
 # libWRP-time
 
-C++ logger header-only time library.
+C++ time helper function header-only library.
 
 ## support
 
