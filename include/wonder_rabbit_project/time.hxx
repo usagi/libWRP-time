@@ -68,7 +68,6 @@ namespace wonder_rabbit_project
     , const T_duration_in target_time
     , const bool& condition_to_continue
     , const T_hook_skipping& hook_skipping
-        = [](const T_duration&){ }
     )
       -> void
     {
@@ -85,6 +84,20 @@ namespace wonder_rabbit_project
         }
       }
     }
+    
+    template
+    < class T_duration    = std::chrono::nanoseconds
+    , class T_clock       = std::chrono::high_resolution_clock
+    , class T_function    = std::function<void()>
+    , class T_duration_in = std::chrono::nanoseconds
+    >
+    auto adjust_loop_with_skipping
+    ( const T_function& f
+    , const T_duration_in target_time
+    , const bool& condition_to_continue
+    )
+      -> void
+    { adjust_loop_with_skipping<T_duration, T_clock>(f, target_time, condition_to_continue, [](const std::chrono::nanoseconds&){}); }
     
   }
 }
