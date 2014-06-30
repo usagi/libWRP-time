@@ -2,15 +2,16 @@
 #include <thread>
 #include <iostream>
 
-#include <wonder_rabbit_project/time.hxx>
+#include <wonder_rabbit_project/wonderland/time.hxx>
 
 auto main()
   -> int
 {
-  using wonder_rabbit_project::time::adjust_loop_with_skipping;
-  using wonder_rabbit_project::time::for_time_until;
-  using wonder_rabbit_project::time::time;
-  using wonder_rabbit_project::time::adjust;
+  using wonder_rabbit_project::wonderland::time::adjust_loop_with_skipping;
+  using wonder_rabbit_project::wonderland::time::for_time_until;
+  using wonder_rabbit_project::wonderland::time::time;
+  using wonder_rabbit_project::wonderland::time::adjust;
+  
   using clock_t = std::chrono::high_resolution_clock;
   using std::chrono::milliseconds;
   using std::chrono::nanoseconds;
@@ -19,7 +20,7 @@ auto main()
   auto example_function = []()
   {
     using std::this_thread::sleep_for;
-    sleep_for(milliseconds(100));
+    sleep_for( milliseconds( 100 ) );
   };
   
   // 1. `for_time_until` and `time` example:
