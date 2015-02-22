@@ -18,4 +18,4 @@ basic usage to see the [exmaple/example.cxx](example/example.cxx).
 
 ## author
 
-(C)2014 Usagi Ito in [Wonder Rabbit Project](http://www.WonderRabbitProject.net/).
+(C)2015 Usagi Ito in [Wonder Rabbit Project](http://www.WonderRabbitProject.net/).
